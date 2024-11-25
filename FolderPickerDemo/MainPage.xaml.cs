@@ -27,7 +27,10 @@ namespace FolderPickerDemo
             try
             {
                 var defaultFolder = AppDomain.CurrentDomain.BaseDirectory;
-                Microsoft.Maui.ApplicationModel.Launcher.Default.OpenAsync(defaultFolder);
+                // Convert the directory path to a file URL with the "file://" scheme
+                var folderUri = new Uri($"file://{defaultFolder}");
+
+                Microsoft.Maui.ApplicationModel.Launcher.Default.OpenAsync(folderUri);
             }
             catch (Exception ex)
             {
