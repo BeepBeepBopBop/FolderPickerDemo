@@ -21,5 +21,18 @@ namespace FolderPickerDemo
                 }
             });
         }
+
+        private void Button2_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var defaultFolder = AppDomain.CurrentDomain.BaseDirectory;
+                Microsoft.Maui.ApplicationModel.Launcher.Default.OpenAsync(defaultFolder);
+            }
+            catch (Exception ex)
+            {
+                this.result.Text = "Error: " + ex.Message;
+            }
+        }
     }
 }
