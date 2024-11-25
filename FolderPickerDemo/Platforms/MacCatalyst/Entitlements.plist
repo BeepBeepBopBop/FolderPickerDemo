@@ -10,10 +10,10 @@
         <key>com.apple.security.network.client</key>
         <true/>
 
+        <!-- The authorizations below are mandatory to use CommunityToolkit FolderPicker service on Mac. -->
         <key>com.apple.security.files.user-selected.read-only</key>
         <true/>
-
         <key>com.apple.security.files.user-selected.read-write</key>
-<true/>
+        <true/>
     </dict>
 </plist>
